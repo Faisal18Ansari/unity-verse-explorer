@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,6 +18,11 @@ import {
   Trophy
 } from "lucide-react";
 
+// EmailJS service
+const EMAILJS_PUBLIC_KEY = "VwxawXp0-BggAvAvZ";
+const EMAILJS_TEMPLATE_ID = "template_rp89vzp";
+const EMAILJS_SERVICE_ID = "service_ekvy7c8";
+
 const ContactLevel = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -27,20 +32,49 @@ const ContactLevel = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Initialize EmailJS
+  useEffect(() => {
+    // @ts-ignore - EmailJS is loaded from CDN
+    window.emailjs?.init(EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        project_type: formData.projectType,
+        message: formData.message
+      };
+      
+      // Send email using EmailJS
+      // @ts-ignore - EmailJS is loaded from CDN
+      await window.emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
+      
       toast({
         title: "Message Sent!",
         description: "Thanks for reaching out! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", projectType: "", message: "" });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -54,28 +88,28 @@ const ContactLevel = () => {
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/faisalmujahid",
+      url: "https://github.com/Faisal18Ansari",
       color: "text-foreground hover:text-secondary",
       description: "Check out my code repositories"
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com/in/faisalmujahid",
+      url: "https://www.linkedin.com/in/faisal-mujahid-745168273",
       color: "text-foreground hover:text-accent",
       description: "Connect with me professionally"
     },
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/faisalmujahid",
+      url: "https://www.instagram.com/faisa1.exe/",
       color: "text-foreground hover:text-neon-pink",
       description: "Follow my journey"
     },
     {
       name: "Itch.io",
       icon: Trophy,
-      url: "https://faisalmujahid.itch.io",
+      url: "https://faisal-mujahid.itch.io/",
       color: "text-foreground hover:text-electric-blue",
       description: "Play my games"
     }
@@ -251,7 +285,7 @@ const ContactLevel = () => {
                 className="pixel-button w-full"
                 asChild
               >
-                <a href="/resume.pdf" download>
+                <a href="https://drive.google.com/file/d/1VrOYgPm30rbmkq1BHf3Y1u1CZBMtfV_L/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4 mr-2" />
                   DOWNLOAD PDF
                 </a>

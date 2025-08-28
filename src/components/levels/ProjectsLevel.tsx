@@ -13,7 +13,7 @@ const ProjectsLevel = () => {
       role: "Team Lead of 5 members, Database Designer",
       technologies: ["MongoDB", "Full-stack", "Database Design", "Team Leadership"],
       links: {
-        github: "https://github.com/faisalmujahid/curahunt",
+        github: "https://github.com/Faisal18Ansari/curahunt",
         demo: "#"
       },
       status: "completed",
@@ -27,8 +27,8 @@ const ProjectsLevel = () => {
       role: "Solo Developer",
       technologies: ["Unity", "C#", "Game Mechanics", "Level Design"],
       links: {
-        github: "https://github.com/faisalmujahid/light-the-lanterns",
-        demo: "https://faisalmujahid.itch.io/light-the-lanterns"
+        github: "https://github.com/Faisal18Ansari/light-the-lanterns",
+        demo: "https://faisal-mujahid.itch.io/light-the-lanterns"
       },
       status: "completed",
       color: "accent"
@@ -41,8 +41,8 @@ const ProjectsLevel = () => {
       role: "Game Developer",
       technologies: ["Unity", "C#", "AI Pathfinding", "Game Physics"],
       links: {
-        github: "https://github.com/faisalmujahid/starlight-dash",
-        demo: "https://faisalmujahid.itch.io/starlight-dash"
+        github: "https://github.com/Faisal18Ansari/starlight-dash",
+        demo: "https://faisal-mujahid.itch.io/starlight-dash"
       },
       status: "completed",
       color: "electric-blue"

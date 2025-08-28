@@ -40,7 +40,7 @@ const StartScreen = ({ onStart }: StartScreenProps) => {
 
         <div className="space-y-2 font-inter">
           <p className="text-lg text-muted-foreground">
-            PRESS PLAY TO
+            PRESS START TO
           </p>
           <p className="text-xl text-foreground font-semibold">
             ENTER STORY MODE
@@ -60,7 +60,7 @@ const StartScreen = ({ onStart }: StartScreenProps) => {
           </p>
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://github.com/faisalmujahid" 
+              href="https://github.com/Faisal18Ansari" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-secondary transition-colors duration-300 animate-float"
@@ -68,7 +68,7 @@ const StartScreen = ({ onStart }: StartScreenProps) => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com/in/faisalmujahid" 
+              href="https://www.linkedin.com/in/faisal-mujahid-745168273" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors duration-300 animate-float"
@@ -77,7 +77,7 @@ const StartScreen = ({ onStart }: StartScreenProps) => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="https://instagram.com/faisalmujahid" 
+              href="https://www.instagram.com/faisa1.exe/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-neon-pink transition-colors duration-300 animate-float"
