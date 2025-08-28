@@ -100,7 +100,7 @@ Eager to connect with developers, designers, and enthusiasts passionate about ga
               <p>
                 My passion is to explore games and explain their mechanics to others. 
                 I have plans to start a gaming blog where I can document my game development 
-                journey anshare insights about the industry.
+                journey and share insights about the industry.
               </p>
               <p>During my BCA, I developed a strong computer science foundation, focusing on game development and gaining skills in Unity and C#.
             </p>
