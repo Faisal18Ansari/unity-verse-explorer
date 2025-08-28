@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
@@ -64,7 +65,7 @@ const AboutLevel = () => {
             </div>
             <div className="flex items-center space-x-3">
               <Calendar className="w-5 h-5 text-accent" />
-              <span className="text-sm">Third Year BCA Student</span>
+              <span className="text-sm">Recent BCA Graduate</span>
             </div>
             <div className="flex items-center space-x-3">
               <GraduationCap className="w-5 h-5 text-electric-blue" />
@@ -97,9 +98,9 @@ const AboutLevel = () => {
             <h3 className="font-pixel text-lg text-accent mb-4">PLAYER BACKSTORY</h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I am a third year undergraduate student studying in some institute of 
-                technology, somewhere. I am from the city of joy, cityname. I completed my 
-                +2 from some school.
+                I'm Faisal Mujahid, a recent BCA graduate from Guru Gobind Singh Indraprastha University, 
+                with a strong focus on game development and programming using Unity and C#. My journey in 
+                technology has been driven by a passion for creating immersive gaming experiences.
               </p>
               <p>
                 My passion is to explore games and explain their mechanics to others. 
@@ -107,9 +108,9 @@ const AboutLevel = () => {
                 journey and share insights about the industry.
               </p>
               <p>
-                Currently working as a freelance game tester while pursuing my degree, 
-                combining practical experience with academic learning to build a strong 
-                foundation in game development.
+                Currently working as a freelance game tester while building my portfolio, 
+                combining practical experience with academic learning to establish a strong 
+                foundation in game development and interactive media.
               </p>
             </div>
           </Card>
