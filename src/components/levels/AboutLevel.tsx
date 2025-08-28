@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
-
 const AboutLevel = () => {
   const education = [{
     degree: "Bachelor of Computer Applications (BCA)",
@@ -23,7 +22,6 @@ const AboutLevel = () => {
     grade: "87%",
     status: "completed"
   }];
-
   return <div className="container mx-auto px-6 py-12 space-y-12">
       {/* Header */}
       <div className="text-center space-y-4 animate-slideInUp">
@@ -41,11 +39,7 @@ const AboutLevel = () => {
           <div className="text-center space-y-4">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-secondary to-accent p-1">
               <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
-                <img 
-                  src="https://i.postimg.cc/bJm782qm/profile2.jpg" 
-                  alt="Faisal Mujahid"
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://i.postimg.cc/bJm782qm/profile2.jpg" alt="Faisal Mujahid" className="w-full h-full object-cover" />
               </div>
             </div>
             <div>
@@ -61,7 +55,8 @@ const AboutLevel = () => {
             </div>
             <div className="flex items-center space-x-3">
               <Calendar className="w-5 h-5 text-accent" />
-              <span className="text-sm">Third Year BCA Student</span>
+              <span className="text-sm">BCA  Graduate
+            </span>
             </div>
             <div className="flex items-center space-x-3">
               <GraduationCap className="w-5 h-5 text-electric-blue" />
@@ -140,5 +135,4 @@ const AboutLevel = () => {
       </div>
     </div>;
 };
-
 export default AboutLevel;
