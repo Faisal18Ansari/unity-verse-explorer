@@ -94,14 +94,9 @@ const AboutLevel = () => {
                 I'm Faisal Mujahid, and I'm a recent BCA graduate from Guru Gobind Singh Indraprastha University, 
                 with a strong focus on game development and programming using Unity and C#.
               </p>
-              <p>
-                My passion is to explore games and explain their mechanics to others. 
-                I have plans to start a gaming blog where I can document my game development 
-                journey and share insights about the industry.
-              </p>
-              <p>
-                I am eager to connect with developers, designers, and enthusiasts who share a passion for games and interactive experiences. I believe in learning by building and am excited to contribute to discussions and collaborations within the game development community. If you're ready to bring your game idea to life or want to discuss the craft of game creation, let's connect and explore what we can build together.
-              </p>
+              <p>During my BCA journey, I gained a strong computer science foundation and focused on game development. I have hands-on experience with Unity for 2D and 3D scenes, using C# for scripting, enabling effective gameplay prototype creation.</p>
+              <p>Eager to connect with developers, designers, and enthusiasts passionate about games and interactive experiences. Excited to contribute to discussions and collaborations in game development. Let's connect to bring game ideas to life and explore creative possibilities together.
+            </p>
             </div>
           </Card>
 
