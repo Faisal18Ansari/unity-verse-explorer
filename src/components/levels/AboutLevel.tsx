@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
-
 const AboutLevel = () => {
   const education = [{
     degree: "Bachelor of Computer Applications (BCA)",
@@ -23,7 +22,6 @@ const AboutLevel = () => {
     grade: "87%",
     status: "completed"
   }];
-
   return <div className="container mx-auto px-6 py-12 space-y-12">
       {/* Header */}
       <div className="text-center space-y-4 animate-slideInUp">
@@ -40,12 +38,8 @@ const AboutLevel = () => {
       }}>
           <div className="text-center space-y-4">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-secondary to-accent p-1">
-              <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
-                <img 
-                  src="https://i.postimg.cc/bJm782qm/profile2.jpg" 
-                  alt="Faisal Mujahid"
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
+                <div className="font-pixel text-2xl text-secondary">FM</div>
               </div>
             </div>
             <div>
@@ -95,18 +89,21 @@ const AboutLevel = () => {
           <Card className="level-card">
             <h3 className="font-pixel text-lg text-accent mb-4">PLAYER BACKSTORY</h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                I'm Faisal Mujahid, and I'm a recent BCA graduate from Guru Gobind Singh Indraprastha University, 
-                with a strong focus on game development and programming using Unity and C#.
-              </p>
+              <p>PLAYER BACKSTORY
+
+I'm Faisal Mujahid, and I'm a recent BCA graduate from Guru Gobind Singh Indraprastha University, with a strong focus on game development and programming using Unity and C#.
+
+During my BCA, I developed a strong computer science foundation, focusing on game development and gaining skills in Unity and C#.
+
+
+Eager to connect with developers, designers, and enthusiasts passionate about games and interactive experiences. Excited to contribute to discussions and collaborations in game development. Let's connect to bring game ideas to life and explore creative possibilities together.</p>
               <p>
                 My passion is to explore games and explain their mechanics to others. 
                 I have plans to start a gaming blog where I can document my game development 
                 journey and share insights about the industry.
               </p>
-              <p>
-                I am eager to connect with developers, designers, and enthusiasts who share a passion for games and interactive experiences. I believe in learning by building and am excited to contribute to discussions and collaborations within the game development community. If you're ready to bring your game idea to life or want to discuss the craft of game creation, let's connect and explore what we can build together.
-              </p>
+              <p>During my BCA, I developed a strong computer science foundation, focusing on game development and gaining skills in Unity and C#.
+            </p>
             </div>
           </Card>
 
@@ -140,5 +137,4 @@ const AboutLevel = () => {
       </div>
     </div>;
 };
-
 export default AboutLevel;
