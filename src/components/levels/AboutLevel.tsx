@@ -43,8 +43,12 @@ const AboutLevel = () => {
         <Card className="level-card space-y-6 animate-slideInUp" style={{ animationDelay: '0.2s' }}>
           <div className="text-center space-y-4">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-secondary to-accent p-1">
-              <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                <div className="font-pixel text-2xl text-secondary">FM</div>
+              <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://i.postimg.cc/bJm782qm/profile2.jpg" 
+                  alt="Faisal Mujahid Profile" 
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
             <div>
