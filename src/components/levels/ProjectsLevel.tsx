@@ -1,20 +1,21 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Trophy, Code, Users, Clock } from "lucide-react";
+import { ExternalLink, Github, Trophy, Code, Users, Clock, Globe } from "lucide-react";
 
 const ProjectsLevel = () => {
   const projects = [
     {
       title: "CURAHUNT",
       subtitle: "Full-stack Hackathon Winner",
-      description: "Hi Friend, THIS IS MY FIRST PROJECT AND THIS WILL TAKE YOU TO THROUGH MY PORTFOLIO. ALONG THE WAY, YOU'LL LEARN ABOUT MY SKILLS, ACHIEVEMENTS, EXPERIENCE AND PROJECTS. OVERALL, IN SHORT, YOU'LL GET TO KNOW EVERYTHING ABOUT ME!!!! VISIT MY GITHUB PORTFOLIO",
+      description: "Curahunt was a full stack project developed by the author and their team during a hackethone event hosted by their college's Internship Cell. The project secured second place, and the author played a key role as the leader and SPOC, maintaining the database and learning Mongo DB. This experience not only improved their skills but also improved their teamwork and communication abilities.",
       achievement: "2nd Place at Interware Hackathon",
-      role: "Team Lead of 5 members, Database Designer",
+      role: "Team Lead & Database Manager",
       technologies: ["MongoDB", "Full-stack", "Database Design", "Team Leadership"],
+      image: "/curahunt.png",
       links: {
-        github: "https://github.com/Faisal18Ansari/curahunt",
-        demo: "#"
+        github: "https://github.com/Faisal18Ansari/IW_CURAHUNT",
+        website: "https://futureforward5.vercel.app/"
       },
       status: "completed",
       color: "secondary"
@@ -22,12 +23,13 @@ const ProjectsLevel = () => {
     {
       title: "LIGHT THE LANTERNS",
       subtitle: "Unity Exploration Game",
-      description: "A peaceful exploration game built with Unity featuring smooth player movement, dynamic camera systems, atmospheric lighting, and fluid animations. Created to showcase core game development skills and provide a serene gaming experience.",
+      description: "Light The Lanterns is a peaceful exploration game I built while learning Unity, where you explore the environment, interact, and light lanterns across the landscape. This project helped me practice core game development workflows, from player movement to animation, camera setup, and environment design. It taught me how to bring small ideas to life and sparked my confidence in building and publishing games on my own.",
       achievement: "Completed Unity Game",
       role: "Solo Developer",
       technologies: ["Unity", "C#", "Game Mechanics", "Level Design"],
+      image: "/light.png",
       links: {
-        github: "https://github.com/Faisal18Ansari/light-the-lanterns",
+        github: "https://github.com/Faisal18Ansari/Light-The-Lanterns",
         demo: "https://faisal-mujahid.itch.io/light-the-lanterns"
       },
       status: "completed",
@@ -36,12 +38,13 @@ const ProjectsLevel = () => {
     {
       title: "STARLIGHT DASH",
       subtitle: "Fast-paced Platformer",
-      description: "An intense platformer game featuring enemy AI, coin collection mechanics, strategic traps, dynamic obstacles, and advanced pathfinding systems. Developed as an internship test project completed in just 3 days.",
-      achievement: "3-day Development Challenge",
+      description: "Step into the neon-lit world of StarLight Dash, a fast-paced platforming experience where you must collect coins, avoid deadly traps, and outmaneuver zombie enemies through beautifully designed levels. Whether it's swinging pendulums, spinning saws, or AI-driven chasers, every step forward is earned through skill and focus.",
+      achievement: "3 day Development Challenge",
       role: "Game Developer",
       technologies: ["Unity", "C#", "AI Pathfinding", "Game Physics"],
+      image: "/starlight-cover.png",
       links: {
-        github: "https://github.com/Faisal18Ansari/starlight-dash",
+        github: "https://github.com/Faisal18Ansari/StarLight-Dash",
         demo: "https://faisal-mujahid.itch.io/starlight-dash"
       },
       status: "completed",
@@ -70,7 +73,7 @@ const ProjectsLevel = () => {
           PROJECT SHOWCASE
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto"></div>
-        <p className="text-muted-foreground font-mono text-sm">
+        <p className="text-muted-foreground font-mono text-base">
           EXPLORE MY PROJECTS
         </p>
       </div>
@@ -130,8 +133,12 @@ const ProjectsLevel = () => {
 
               {/* Project Actions */}
               <div className="space-y-4">
-                <div className="aspect-video bg-gradient-to-br from-muted to-muted/50 rounded-lg border border-border flex items-center justify-center">
-                  <Code className="w-12 h-12 text-muted-foreground" />
+                <div className="bg-gradient-to-br from-muted to-muted/50 rounded-lg border border-border overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-auto max-h-48 object-contain"
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -146,7 +153,22 @@ const ProjectsLevel = () => {
                       VIEW CODE
                     </a>
                   </Button>
-                  {project.links.demo !== "#" && (
+                  
+                  {project.links.website && (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full pixel-button"
+                      asChild
+                    >
+                      <a href={project.links.website} target="_blank" rel="noopener noreferrer">
+                        <Globe className="w-4 h-4 mr-2" />
+                        VISIT WEBSITE
+                      </a>
+                    </Button>
+                  )}
+                  
+                  {project.links.demo && (
                     <Button 
                       variant="default" 
                       size="sm" 

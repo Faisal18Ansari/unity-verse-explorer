@@ -12,7 +12,7 @@ import astronautCharacter from "@/assets/astronaut-character.png";
 
 const Index = () => {
   const [gameState, setGameState] = useState<'loading' | 'start' | 'playing'>('start');
-  const [currentLevel, setCurrentLevel] = useState(0);
+  const [currentLevel, setCurrentLevel] = useState(1);
 
   // Preload images
   useEffect(() => {
@@ -29,7 +29,7 @@ const Index = () => {
 
   const handleLoadingComplete = () => {
     setGameState('playing');
-    setCurrentLevel(1);
+    setCurrentLevel(1); // Level 1 is now the default landing level
   };
 
   const handleLevelChange = (level: number) => {
@@ -47,9 +47,9 @@ const Index = () => {
       case 4:
         return <ExperienceLevel />;
       case 5:
-        return <ContactLevel />;
+        return <ContactLevel onLevelChange={handleLevelChange} />;
       default:
-        return <AboutLevel />;
+        return <AboutLevel />; // Fallback to level 1
     }
   };
 

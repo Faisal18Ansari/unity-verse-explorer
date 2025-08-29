@@ -55,7 +55,7 @@ const StartScreen = ({ onStart }: StartScreenProps) => {
         </Button>
 
         <div className="pt-8">
-          <p className="font-pixel text-xs text-muted-foreground mb-4">
+          <p className="font-pixel text-base md:text-lg text-muted-foreground mb-4">
             FOLLOW ME AT:
           </p>
           <div className="flex justify-center space-x-6">

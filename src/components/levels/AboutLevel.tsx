@@ -37,15 +37,18 @@ const AboutLevel = () => {
         animationDelay: '0.2s'
       }}>
           <div className="text-center space-y-4">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-secondary to-accent p-1">
-              <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
-                <img src="https://i.postimg.cc/bJm782qm/profile2.jpg" alt="Faisal Mujahid" className="w-full h-full object-cover" />
-              </div>
-            </div>
-            <div>
-              <h2 className="font-pixel text-xl text-accent">IT'S FAISAL!</h2>
-              <p className="text-muted-foreground font-mono text-sm">CHARACTER_ID: DEV_001</p>
-            </div>
+                         <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full bg-gradient-to-br from-secondary to-accent p-1">
+               <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
+                 <img src="https://i.postimg.cc/bJm782qm/profile2.jpg" alt="Faisal Mujahid" className="w-full h-full object-cover" />
+               </div>
+             </div>
+                         <div>
+               <h2 className="font-pixel text-xl text-accent">IT'S FAISAL!</h2>
+               <p className="text-muted-foreground font-mono text-sm">CHARACTER_ID: DEV_001</p>
+               <p className="font-pixel text-lg text-secondary mt-2 animate-glow">
+                 Creating worlds players want to explore.
+               </p>
+             </div>
           </div>
 
           <div className="space-y-4">
@@ -64,23 +67,23 @@ const AboutLevel = () => {
             </div>
           </div>
 
-          <div className="space-y-3">
-            <h3 className="font-pixel text-sm text-secondary">CHARACTER STATS:</h3>
-            <div className="grid grid-cols-2 gap-3">
-              <Badge variant="outline" className="justify-center border-secondary text-secondary">
-                Game Dev
-              </Badge>
-              <Badge variant="outline" className="justify-center border-accent text-accent">
-                Team Leader
-              </Badge>
-              <Badge variant="outline" className="justify-center border-electric-blue text-electric-blue">
-                Unity Expert
-              </Badge>
-              <Badge variant="outline" className="justify-center border-neon-pink text-neon-pink">
-                C# Ninja
-              </Badge>
-            </div>
-          </div>
+                     <div className="space-y-4">
+             <h3 className="font-pixel text-base text-secondary">CHARACTER STATS:</h3>
+             <div className="grid grid-cols-2 gap-4">
+               <Badge variant="outline" className="justify-center border-secondary text-secondary text-sm py-2 px-4">
+                 Game Dev
+               </Badge>
+               <Badge variant="outline" className="justify-center border-accent text-accent text-sm py-2 px-4">
+                 Team Leader
+               </Badge>
+               <Badge variant="outline" className="justify-center border-electric-blue text-electric-blue text-sm py-2 px-4">
+                 Unity Expert
+               </Badge>
+               <Badge variant="outline" className="justify-center border-neon-pink text-neon-pink text-sm py-2 px-4">
+                 C# Ninja
+               </Badge>
+             </div>
+           </div>
         </Card>
 
         {/* Bio */}

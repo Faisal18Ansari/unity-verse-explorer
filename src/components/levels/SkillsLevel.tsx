@@ -10,10 +10,10 @@ const SkillsLevel = () => {
       icon: Gamepad2,
       color: "text-secondary",
       skills: [
-        { name: "Unity 3D/2D", level: 90, icon: "🎮" },
-        { name: "C#", level: 85, icon: "💻" },
-        { name: "Gameplay Mechanics", level: 80, icon: "⚙️" },
-        { name: "Level Design", level: 75, icon: "🏗️" }
+        { name: "Unity 3D/2D", level: 80, icon: "🎮" },
+        { name: "C#", level: 75, icon: "💻" },
+        { name: "Gameplay Mechanics", level: 70, icon: "⚙️" },
+        { name: "Level Design", level: 65, icon: "🏗️" }
       ]
     },
     {
@@ -21,9 +21,9 @@ const SkillsLevel = () => {
       icon: Code,
       color: "text-accent",
       skills: [
-        { name: "C++", level: 80, icon: "🔧" },
-        { name: "Python", level: 70, icon: "🐍" },
-        { name: "JavaScript", level: 75, icon: "⚡" },
+        { name: "C++", level: 60, icon: "🔧" },
+        { name: "Python", level: 60, icon: "🐍" },
+        { name: "JavaScript", level: 55, icon: "⚡" },
         { name: "Git", level: 85, icon: "📝" }
       ]
     },
@@ -32,10 +32,10 @@ const SkillsLevel = () => {
       icon: Database,
       color: "text-electric-blue",
       skills: [
-        { name: "SQL", level: 75, icon: "🗃️" },
-        { name: "MongoDB", level: 80, icon: "🍃" },
+        { name: "SQL", level: 55, icon: "🗃️" },
+        { name: "MongoDB", level: 70, icon: "🍃" },
         { name: "NavMesh", level: 70, icon: "🧭" },
-        { name: "Game Testing", level: 90, icon: "🐛" }
+        { name: "Game Testing", level: 80, icon: "🐛" }
       ]
     },
     {
@@ -52,10 +52,10 @@ const SkillsLevel = () => {
   ];
 
   const interests = [
-    { name: "Music", icon: "🎵", description: "Audio design inspiration" },
-    { name: "Photography", icon: "📸", description: "Visual composition skills" },
-    { name: "Long Drives", icon: "🚗", description: "Racing game mechanics" },
-    { name: "Hiking", icon: "🥾", description: "Level exploration concepts" }
+    { name: "Game Facts", icon: "🎲", description: "Gaming knowledge & trivia" },
+    { name: "Horror Movies", icon: "👻", description: "Atmospheric inspiration" },
+    { name: "Racing Games", icon: "🏎️", description: "Speed & precision mechanics" },
+    { name: "Debugging", icon: "🔍", description: "Problem-solving skills" }
   ];
 
   return (
@@ -66,7 +66,7 @@ const SkillsLevel = () => {
           CHARACTER SKILLS
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto"></div>
-        <p className="text-muted-foreground font-mono text-sm">
+        <p className="text-muted-foreground font-mono text-base">
           THESE SKILLS ARE CONSTANTLY UPGRADED AT HIGHER LEVELS
         </p>
       </div>
@@ -130,8 +130,8 @@ const SkillsLevel = () => {
         </div>
 
         <div className="mt-6 p-4 bg-secondary/10 rounded-lg border border-secondary/20">
-          <p className="text-sm text-muted-foreground text-center">
-            <span className="font-pixel text-xs text-accent">TIP:</span> These are some activities this character is interested in to stay productive.
+          <p className="text-base text-muted-foreground text-center">
+            <span className="font-pixel text-sm text-accent">TIP:</span> These are some activities this character is interested in to stay productive.
           </p>
         </div>
       </Card>

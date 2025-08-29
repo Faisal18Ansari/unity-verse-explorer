@@ -64,7 +64,7 @@ const ExperienceLevel = () => {
           WORK EXPERIENCE
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto"></div>
-        <p className="text-muted-foreground font-mono text-sm">
+        <p className="text-muted-foreground font-mono text-base">
           EXPLORE MY WORK JOURNEY
         </p>
       </div>

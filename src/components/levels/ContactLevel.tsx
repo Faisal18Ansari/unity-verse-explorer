@@ -23,7 +23,11 @@ const EMAILJS_PUBLIC_KEY = "VwxawXp0-BggAvAvZ";
 const EMAILJS_TEMPLATE_ID = "template_rp89vzp";
 const EMAILJS_SERVICE_ID = "service_ekvy7c8";
 
-const ContactLevel = () => {
+interface ContactLevelProps {
+  onLevelChange?: (level: number) => void;
+}
+
+const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -129,11 +133,11 @@ const ContactLevel = () => {
       {/* Header */}
       <div className="text-center space-y-4 animate-slideInUp">
         <h1 className="font-pixel text-3xl md:text-5xl text-secondary">
-          CONTACT ME
+          EDUCATION
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto"></div>
-        <p className="text-muted-foreground font-mono text-sm">
-          FINAL LEVEL - LET'S CONNECT!
+        <p className="text-muted-foreground font-mono text-base">
+          FINAL LEVEL - ACADEMIC JOURNEY
         </p>
       </div>
 
@@ -143,7 +147,7 @@ const ContactLevel = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <Mail className="w-6 h-6 text-secondary" />
-              <h2 className="font-pixel text-lg text-secondary">SEND MESSAGE</h2>
+              <h2 className="font-pixel text-lg text-secondary">ACADEMIC BACKGROUND</h2>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -244,7 +248,7 @@ const ContactLevel = () => {
           {/* Social Links */}
           <Card className="level-card animate-slideInUp" style={{ animationDelay: '0.2s' }}>
             <div className="space-y-6">
-              <h2 className="font-pixel text-lg text-accent">CONNECT WITH ME</h2>
+              <h2 className="font-pixel text-lg text-accent">PROFESSIONAL LINKS</h2>
               
               <div className="space-y-4">
                 {socialLinks.map((social, index) => (
@@ -329,12 +333,47 @@ const ContactLevel = () => {
               You have cleared all the levels! You can go back to any level you want 
               or contact me for work or maybe we can have a cup of coffee and discuss about more games!
             </p>
-            <div className="flex justify-center space-x-4">
-              <Badge variant="outline" className="border-secondary text-secondary">LEVEL 1</Badge>
-              <Badge variant="outline" className="border-accent text-accent">LEVEL 2</Badge>
-              <Badge variant="outline" className="border-electric-blue text-electric-blue">LEVEL 3</Badge>
-              <Badge variant="outline" className="border-neon-pink text-neon-pink">LEVEL 4</Badge>
-              <Badge variant="outline" className="border-secondary text-secondary">FINAL LEVEL</Badge>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="pixel-button border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
+                onClick={() => onLevelChange?.(1)}
+              >
+                LEVEL 1
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="pixel-button border-accent text-accent hover:bg-accent hover:text-accent-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
+                onClick={() => onLevelChange?.(2)}
+              >
+                LEVEL 2
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="pixel-button border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-electric-blue-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
+                onClick={() => onLevelChange?.(3)}
+              >
+                LEVEL 3
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="pixel-button border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-neon-pink-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
+                onClick={() => onLevelChange?.(4)}
+              >
+                LEVEL 4
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="pixel-button border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
+                onClick={() => onLevelChange?.(5)}
+              >
+                FINAL LEVEL
+              </Button>
             </div>
           </div>
         </Card>
