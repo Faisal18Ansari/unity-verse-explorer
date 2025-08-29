@@ -1,3 +1,4 @@
+import ContactLevel from "@/components/levels/ContactLevel";
 import { useState, useEffect } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import StartScreen from "@/components/StartScreen";
@@ -6,7 +7,7 @@ import AboutLevel from "@/components/levels/AboutLevel";
 import SkillsLevel from "@/components/levels/SkillsLevel";
 import ProjectsLevel from "@/components/levels/ProjectsLevel";
 import ExperienceLevel from "@/components/levels/ExperienceLevel";
-import EducationLevel from "@/components/levels/EducationLevel";
+
 import cyberpunkCity from "@/assets/cyberpunk-city.jpg";
 import astronautCharacter from "@/assets/astronaut-character.png";
 
@@ -47,7 +48,7 @@ const Index = () => {
       case 4:
         return <ExperienceLevel />;
       case 5:
-        return <EducationLevel />;
+  return <ContactLevel />;
       default:
         return <AboutLevel />; // Fallback to level 1
     }

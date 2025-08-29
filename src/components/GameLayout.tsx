@@ -1,6 +1,6 @@
-import { useState, ReactNode } from "react";
+import { useState, ReactNode, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Zap, User, Code, Briefcase, GraduationCap } from "lucide-react";
+import { ChevronLeft, ChevronRight, Zap, User, Code, Briefcase, GraduationCap, Mail } from "lucide-react";
 
 interface GameLayoutProps {
   children: ReactNode;
@@ -10,12 +10,19 @@ interface GameLayoutProps {
 }
 
 const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: GameLayoutProps) => {
+  // Scroll to top on level change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentLevel]);
+
+
+
   const levels = [
     { id: 1, name: "About Me", icon: User, color: "text-secondary" },
     { id: 2, name: "Skills", icon: Code, color: "text-accent" },
     { id: 3, name: "Projects", icon: Zap, color: "text-electric-blue" },
     { id: 4, name: "Experience", icon: Briefcase, color: "text-neon-pink" },
-    { id: 5, name: "Education", icon: GraduationCap, color: "text-cyan-400" }
+  { id: 5, name: "Contact Me", icon: Mail, color: "text-cyan-400" }
   ];
 
   const currentLevelData = levels[currentLevel - 1];

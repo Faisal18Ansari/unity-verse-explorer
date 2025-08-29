@@ -65,15 +65,15 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
       );
       
       toast({
-        title: "TRANSMISSION SUCCESSFUL!",
-        description: "Message received in the cybernet. Expect a response soon, player!",
+        title: "Message Sent!",
+        description: "Thanks for reaching out! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", projectType: "", message: "" });
     } catch (error) {
       console.error("Error sending email:", error);
       toast({
-        title: "TRANSMISSION FAILED!",
-        description: "Connection error in the cybernet. Please try again, player.",
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
         variant: "destructive"
       });
     } finally {
@@ -133,11 +133,11 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
       {/* Header */}
       <div className="text-center space-y-4 animate-slideInUp">
         <h1 className="font-pixel text-3xl md:text-5xl text-secondary">
-          EDUCATION
+          CONTACT ME
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto"></div>
-        <p className="text-muted-foreground font-mono text-base">
-          FINAL LEVEL - ACADEMIC JOURNEY
+        <p className="text-muted-foreground font-mono text-base uppercase">
+          FINAL LEVEL - REACH OUT
         </p>
       </div>
 
@@ -147,8 +147,8 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <Mail className="w-6 h-6 text-secondary" />
-              <h2 className="font-pixel text-lg text-secondary">ACADEMIC BACKGROUND</h2>
-            </div>
+              <h2 className="font-pixel text-lg text-secondary">CONTACT ME</h2>
+       </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
@@ -305,7 +305,7 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <div className="font-pixel text-2xl text-secondary">5</div>
-                  <div className="text-sm md:text-base text-muted-foreground">LEVELS CLEARED</div>
+                  <div className="text-xs text-muted-foreground">LEVELS CLEARED</div>
                 </div>
                 <div className="space-y-2">
                   <div className="font-pixel text-2xl text-accent">100%</div>
@@ -372,7 +372,7 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
                 className="pixel-button border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
                 onClick={() => onLevelChange?.(5)}
               >
-                FINAL LEVEL
+                CONTACT ME
               </Button>
             </div>
           </div>
