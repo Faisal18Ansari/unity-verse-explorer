@@ -39,8 +39,7 @@ const AboutLevel = () => {
             </div>
             <div className="flex items-center space-x-3">
               <Calendar className="w-5 h-5 text-accent" />
-              <span className="text-sm">BCA  Graduate
-            </span>
+              <span className="text-sm">BCA Graduate</span>
             </div>
             <div className="flex items-center space-x-3">
               <GraduationCap className="w-5 h-5 text-electric-blue" />
@@ -79,8 +78,7 @@ const AboutLevel = () => {
                 with a strong focus on game development and programming using Unity and C#.
               </p>
               <p>During my BCA journey, I gained a strong computer science foundation and focused on game development. I have hands-on experience with Unity for 2D and 3D scenes, using C# for scripting, enabling effective gameplay prototype creation.</p>
-              <p>Eager to connect with developers, designers, and enthusiasts passionate about games and interactive experiences. Excited to contribute to discussions and collaborations in game development. Let's connect to bring game ideas to life and explore creative possibilities together.
-            </p>
+              <p>Eager to connect with developers, designers, and enthusiasts passionate about games and interactive experiences. Excited to contribute to discussions and collaborations in game development. Let's connect to bring game ideas to life and explore creative possibilities together.</p>
             </div>
           </Card>
 

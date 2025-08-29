@@ -1,6 +1,7 @@
-import { useState, ReactNode, useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Zap, User, Code, Briefcase, GraduationCap, Mail } from "lucide-react";
+import { ChevronLeft, ChevronRight, Zap, User, Code, Briefcase, Mail, Award } from "lucide-react";
+import { toast } from "sonner";
 
 interface GameLayoutProps {
   children: ReactNode;
@@ -10,41 +11,35 @@ interface GameLayoutProps {
 }
 
 const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: GameLayoutProps) => {
-  // Scroll to top on level change
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    if (currentLevel === 1) {
+      toast.info("Achievement Unlocked: Portfolio Explorer!", {
+        description: "You have started your journey.",
+        icon: <Award className="w-4 h-4" />
+      });
+    }
   }, [currentLevel]);
-
-
 
   const levels = [
     { id: 1, name: "About Me", icon: User, color: "text-secondary" },
     { id: 2, name: "Skills", icon: Code, color: "text-accent" },
     { id: 3, name: "Projects", icon: Zap, color: "text-electric-blue" },
     { id: 4, name: "Experience", icon: Briefcase, color: "text-neon-pink" },
-  { id: 5, name: "Contact Me", icon: Mail, color: "text-cyan-400" }
+    { id: 5, name: "Contact Me", icon: Mail, color: "text-cyan-400" }
   ];
 
   const currentLevelData = levels[currentLevel - 1];
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Cyberpunk Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-background via-space-navy to-nebula-purple opacity-90" />
-      <div 
-        className="fixed inset-0 opacity-20" 
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}
-      />
-      
+    <div className="min-h-screen relative overflow-hidden crt-screen">
       {/* Top Navigation */}
       <nav className="relative z-10 flex items-center justify-between p-6 border-b border-gray-700/50 backdrop-blur-sm navbar-transition">
         <div className={`font-pixel text-base md:text-lg ${currentLevelData?.color}`}>
           LEVEL {currentLevel} - {currentLevelData?.name}
         </div>
         
-        {/* Level Progress */}
         <div className="flex items-center space-x-4">
           {levels.map((level) => (
             <button

@@ -83,7 +83,7 @@ const ProjectsLevel = () => {
         {projects.map((project, index) => (
           <Card 
             key={project.title}
-            className="level-card animate-slideInUp"
+            className="level-card animate-slideInUp project-card-tilt"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <div className="grid lg:grid-cols-3 gap-6">
