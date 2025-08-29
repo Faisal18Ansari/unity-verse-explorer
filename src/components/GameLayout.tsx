@@ -1,6 +1,6 @@
 import { useState, ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Zap, Home, User, Code, Briefcase, Mail } from "lucide-react";
+import { ChevronLeft, ChevronRight, Zap, Home, User, Code, Briefcase, GraduationCap } from "lucide-react";
 
 interface GameLayoutProps {
   children: ReactNode;
@@ -11,14 +11,14 @@ interface GameLayoutProps {
 
 const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: GameLayoutProps) => {
   const levels = [
-    { id: 1, name: "ABOUT ME", icon: User, color: "text-cyan-400" },
-    { id: 2, name: "SKILLS", icon: Code, color: "text-cyan-400" },
-    { id: 3, name: "PROJECTS", icon: Zap, color: "text-cyan-400" },
-    { id: 4, name: "EXPERIENCE", icon: Briefcase, color: "text-cyan-400" },
-    { id: 5, name: "EDUCATION", icon: Mail, color: "text-cyan-400" }
+    { id: 1, name: "ABOUT ME", icon: User, color: "text-cyber-cyan" },
+    { id: 2, name: "SKILLS", icon: Code, color: "text-cyber-cyan" },
+    { id: 3, name: "PROJECTS", icon: Zap, color: "text-cyber-cyan" },
+    { id: 4, name: "EXPERIENCE", icon: Briefcase, color: "text-cyber-cyan" },
+    { id: 5, name: "EDUCATION", icon: GraduationCap, color: "text-cyber-cyan" }
   ];
 
-  const currentLevelData = levels[currentLevel];
+  const currentLevelData = levels[currentLevel - 1];
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -30,8 +30,8 @@ const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: Game
            }} />
       
              {/* Top Navigation */}
-       <nav className="relative z-10 flex items-center justify-between p-6 border-b border-cyan-400/30 backdrop-blur-sm navbar-transition">
-                  <div className="font-pixel text-base md:text-lg text-cyan-400">
+       <nav className="relative z-10 flex items-center justify-between p-6 border-b border-cyber-cyan/30 backdrop-blur-sm navbar-transition">
+                  <div className="font-pixel text-base md:text-lg text-cyber-cyan">
             LEVEL {currentLevel} - {currentLevelData?.name}
           </div>
         
@@ -41,11 +41,11 @@ const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: Game
              <button
                key={level.id}
                onClick={() => onLevelChange(level.id)}
-               className={`w-3 h-3 rounded-full border-2 transition-all duration-300 hover:scale-110 ${
-                 level.id <= currentLevel 
-                   ? 'bg-cyan-400 border-cyan-400 animate-pulse' 
-                   : 'bg-transparent border-cyan-400/50 hover:border-cyan-400'
-               }`}
+                             className={`w-3 h-3 rounded-full border-2 transition-all duration-300 hover:scale-110 ${
+                level.id <= currentLevel 
+                  ? 'bg-cyber-cyan border-cyber-cyan animate-pulse' 
+                  : 'bg-transparent border-cyber-cyan/50 hover:border-cyber-cyan'
+              }`}
                title={level.name}
              />
            ))}
@@ -63,7 +63,7 @@ const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: Game
 
              {/* Navigation Controls */}
        <div className="fixed z-20 bottom-4 left-4 md:bottom-6 md:left-6">
-         <div className="flex items-center space-x-2 md:space-x-4 bg-card/90 backdrop-blur-md rounded-lg border border-cyan-400/30 p-2 md:p-4 shadow-lg navbar-transition">
+         <div className="flex items-center space-x-2 md:space-x-4 bg-card/90 backdrop-blur-md rounded-lg border border-cyber-cyan/30 p-2 md:p-4 shadow-lg navbar-transition">
            <Button
              variant="outline"
              size="sm"
@@ -75,12 +75,12 @@ const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: Game
              <span className="hidden sm:inline">PREV</span>
            </Button>
 
-           <div className="font-pixel text-center min-w-[80px] md:min-w-[120px]">
-             <div className="text-cyan-400 text-sm md:text-base">LEVEL {currentLevel}</div>
-             <div className="text-muted-foreground text-xs mt-1">
-               {currentLevelData?.name}
-             </div>
-           </div>
+                     <div className="font-pixel text-center min-w-[80px] md:min-w-[120px]">
+            <div className="text-cyber-cyan text-sm md:text-base">LEVEL {currentLevel}</div>
+            <div className="text-muted-foreground text-xs mt-1">
+              {currentLevelData?.name}
+            </div>
+          </div>
 
            <Button
              variant="outline"
@@ -102,12 +102,12 @@ const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: Game
            className="fixed top-1/2 right-8 z-20 transform -translate-y-1/2 animate-float"
            title="Click the UFO to enter next level"
          >
-           <div className="w-12 h-8 bg-gradient-to-b from-cyan-400 to-cyan-600 rounded-full relative">
-             <div className="absolute inset-0 bg-cyan-400/20 rounded-full animate-pulse" />
-             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-               <div className="w-2 h-2 bg-foreground rounded-full animate-pulse" />
-             </div>
-           </div>
+                     <div className="w-12 h-8 bg-gradient-to-b from-cyber-cyan to-secondary rounded-full relative">
+            <div className="absolute inset-0 bg-cyber-cyan/20 rounded-full animate-pulse" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="w-2 h-2 bg-foreground rounded-full animate-pulse" />
+            </div>
+          </div>
          </button>
        )}
     </div>
