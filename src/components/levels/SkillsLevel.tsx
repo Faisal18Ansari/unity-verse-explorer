@@ -138,8 +138,8 @@ const SkillsLevel = () => {
 
       {/* Level Complete Indicator */}
       <div className="text-center animate-slideInUp" style={{ animationDelay: '0.6s' }}>
-        <div className="inline-block px-6 py-2 bg-accent/20 border border-accent rounded-lg">
-          <p className="font-pixel text-xs text-accent">LEVEL 2 CLEARED</p>
+        <div className="inline-block px-8 py-3 bg-accent/20 border-2 border-accent rounded-lg">
+          <p className="font-pixel text-sm md:text-base text-accent">LEVEL 2 CLEARED</p>
         </div>
       </div>
     </div>

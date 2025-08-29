@@ -65,15 +65,15 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
       );
       
       toast({
-        title: "Message Sent!",
-        description: "Thanks for reaching out! I'll get back to you soon.",
+        title: "TRANSMISSION SUCCESSFUL!",
+        description: "Message received in the cybernet. Expect a response soon, player!",
       });
       setFormData({ name: "", email: "", projectType: "", message: "" });
     } catch (error) {
       console.error("Error sending email:", error);
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again later.",
+        title: "TRANSMISSION FAILED!",
+        description: "Connection error in the cybernet. Please try again, player.",
         variant: "destructive"
       });
     } finally {
@@ -305,7 +305,7 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <div className="font-pixel text-2xl text-secondary">5</div>
-                  <div className="text-xs text-muted-foreground">LEVELS CLEARED</div>
+                  <div className="text-sm md:text-base text-muted-foreground">LEVELS CLEARED</div>
                 </div>
                 <div className="space-y-2">
                   <div className="font-pixel text-2xl text-accent">100%</div>

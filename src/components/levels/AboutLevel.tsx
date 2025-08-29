@@ -1,27 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
+
 const AboutLevel = () => {
-  const education = [{
-    degree: "Bachelor of Computer Applications (BCA)",
-    school: "Institute of Innovation in Technology and Management, Delhi",
-    affiliation: "Guru Gobind Singh University",
-    period: "2022-2025",
-    grade: "CGPA: 9.1",
-    status: "current"
-  }, {
-    degree: "Senior Secondary (12th)",
-    school: "Summer Fields School, Gurugram",
-    period: "2021-2022",
-    grade: "75%",
-    status: "completed"
-  }, {
-    degree: "Secondary (10th)",
-    school: "Summer Fields School, Gurugram",
-    period: "2019-2020",
-    grade: "87%",
-    status: "completed"
-  }];
   return <div className="container mx-auto px-6 py-12 space-y-12">
       {/* Header */}
       <div className="text-center space-y-4 animate-slideInUp">
@@ -103,21 +84,20 @@ const AboutLevel = () => {
             </div>
           </Card>
 
-          {/* Education Section */}
+          {/* Personal Interests & Goals */}
           <Card className="level-card">
-            <h3 className="font-pixel text-lg text-secondary mb-6">EDUCATIONAL JOURNEY</h3>
-            <div className="space-y-4">
-              {education.map((edu, index) => <div key={index} className={`p-4 rounded-lg border border-border/50 ${edu.status === 'current' ? 'bg-secondary/10 border-secondary' : 'bg-muted/5'}`}>
-                  <div className="flex items-start justify-between mb-2">
-                    <h4 className="font-semibold text-foreground">{edu.degree}</h4>
-                    <Badge variant={edu.status === 'current' ? 'default' : 'secondary'} className="text-xs">
-                      {edu.grade}
-                    </Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-1">{edu.school}</p>
-                  {edu.affiliation && <p className="text-xs text-muted-foreground mb-1">Affiliated with {edu.affiliation}</p>}
-                  <p className="text-xs text-accent font-mono">{edu.period}</p>
-                </div>)}
+            <h3 className="font-pixel text-lg text-secondary mb-6">PERSONAL INTERESTS</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Beyond coding, I'm passionate about exploring new gaming technologies, 
+                participating in game jams, and staying updated with the latest trends 
+                in interactive entertainment.
+              </p>
+              <p>
+                I enjoy analyzing game mechanics, studying player psychology, and 
+                experimenting with innovative gameplay concepts that push the boundaries 
+                of traditional gaming experiences.
+              </p>
             </div>
           </Card>
         </div>
@@ -127,8 +107,8 @@ const AboutLevel = () => {
       <div className="text-center animate-slideInUp" style={{
       animationDelay: '0.6s'
     }}>
-        <div className="inline-block px-6 py-2 bg-secondary/20 border border-secondary rounded-lg">
-          <p className="font-pixel text-xs text-secondary">LEVEL 1 CLEARED</p>
+        <div className="inline-block px-8 py-3 bg-secondary/20 border-2 border-secondary rounded-lg">
+          <p className="font-pixel text-sm md:text-base text-secondary">LEVEL 1 CLEARED</p>
         </div>
       </div>
     </div>;

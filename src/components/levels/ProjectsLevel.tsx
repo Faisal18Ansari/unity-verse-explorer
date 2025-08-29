@@ -224,8 +224,8 @@ const ProjectsLevel = () => {
 
       {/* Level Complete Indicator */}
       <div className="text-center animate-slideInUp" style={{ animationDelay: '0.6s' }}>
-        <div className="inline-block px-6 py-2 bg-neon-pink/20 border border-neon-pink rounded-lg">
-          <p className="font-pixel text-xs text-neon-pink">LEVEL 3 CLEARED</p>
+        <div className="inline-block px-8 py-3 bg-neon-pink/20 border-2 border-neon-pink rounded-lg">
+          <p className="font-pixel text-sm md:text-base text-neon-pink">LEVEL 3 CLEARED</p>
         </div>
       </div>
     </div>
