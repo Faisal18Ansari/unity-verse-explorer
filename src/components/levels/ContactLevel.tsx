@@ -372,7 +372,7 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
                 className="pixel-button border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
                 onClick={() => onLevelChange?.(5)}
               >
-                CONTACT ME
+                LEVEL 5
               </Button>
             </div>
           </div>

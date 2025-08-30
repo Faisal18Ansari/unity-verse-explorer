@@ -40,17 +40,17 @@ const Index = () => {
   const renderLevel = () => {
     switch(currentLevel) {
       case 1:
-        return <AboutLevel />;
+        return <AboutLevel onLevelChange={handleLevelChange} />;
       case 2:
-        return <SkillsLevel />;
+        return <SkillsLevel onLevelChange={handleLevelChange} />;
       case 3:
-        return <ProjectsLevel />;
+        return <ProjectsLevel onLevelChange={handleLevelChange} />;
       case 4:
-        return <ExperienceLevel />;
+        return <ExperienceLevel onLevelChange={handleLevelChange} />;
       case 5:
-  return <ContactLevel />;
+        return <ContactLevel onLevelChange={handleLevelChange} />;
       default:
-        return <AboutLevel />; // Fallback to level 1
+        return <AboutLevel onLevelChange={handleLevelChange} />; // Fallback to level 1
     }
   };
 
