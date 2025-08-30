@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Trophy, Code, Users, Clock, Globe } from "lucide-react";
 
-const ProjectsLevel = () => {
+interface ProjectsLevelProps {
+  onLevelChange?: (level: number) => void;
+}
+
+const ProjectsLevel = ({ onLevelChange }: ProjectsLevelProps) => {
   const projects = [
     {
       title: "CURAHUNT",

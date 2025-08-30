@@ -3,7 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Briefcase, Users, Trophy, Calendar, MapPin, Zap } from "lucide-react";
 
-const ExperienceLevel = () => {
+interface ExperienceLevelProps {
+  onLevelChange?: (level: number) => void;
+}
+
+const ExperienceLevel = ({ onLevelChange }: ExperienceLevelProps) => {
   const experiences = [
     {
       id: 1,

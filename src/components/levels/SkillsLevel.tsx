@@ -3,7 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Code, Gamepad2, Database, Wrench, Users, Trophy } from "lucide-react";
 
-const SkillsLevel = () => {
+interface SkillsLevelProps {
+  onLevelChange?: (level: number) => void;
+}
+
+const SkillsLevel = ({ onLevelChange }: SkillsLevelProps) => {
   const skillCategories = [
     {
       title: "GAME DEVELOPMENT",

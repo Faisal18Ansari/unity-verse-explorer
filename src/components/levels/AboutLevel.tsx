@@ -2,7 +2,11 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
 
-const AboutLevel = () => {
+interface AboutLevelProps {
+  onLevelChange?: (level: number) => void;
+}
+
+const AboutLevel = ({ onLevelChange }: AboutLevelProps) => {
   return <div className="container mx-auto px-6 py-12 space-y-12">
       {/* Header */}
       <div className="text-center space-y-4 animate-slideInUp">
