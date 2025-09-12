@@ -6,6 +6,7 @@ import GameLayout from "@/components/GameLayout";
 import AboutLevel from "@/components/levels/AboutLevel";
 import SkillsLevel from "@/components/levels/SkillsLevel";
 import ProjectsLevel from "@/components/levels/ProjectsLevel";
+import CodexLevel from "@/components/levels/CodexLevel";
 import ExperienceLevel from "@/components/levels/ExperienceLevel";
 
 import cyberpunkCity from "@/assets/cyberpunk-city.jpg";
@@ -46,8 +47,10 @@ const Index = () => {
       case 3:
         return <ProjectsLevel onLevelChange={handleLevelChange} />;
       case 4:
-        return <ExperienceLevel onLevelChange={handleLevelChange} />;
+        return <CodexLevel />;
       case 5:
+        return <ExperienceLevel onLevelChange={handleLevelChange} />;
+      case 6:
         return <ContactLevel onLevelChange={handleLevelChange} />;
       default:
         return <AboutLevel onLevelChange={handleLevelChange} />; // Fallback to level 1
@@ -81,7 +84,7 @@ const Index = () => {
       <GameLayout 
         currentLevel={currentLevel} 
         onLevelChange={handleLevelChange}
-        totalLevels={5}
+        totalLevels={6}
       >
         {renderLevel()}
       </GameLayout>

@@ -56,18 +56,7 @@ const ProjectsLevel = ({ onLevelChange }: ProjectsLevelProps) => {
     }
   ];
 
-  const upcomingBlog = {
-    title: "GAME MECHANICS CHRONICLES",
-    subtitle: "Developer's Codex - Coming Soon",
-    description: "A dedicated space for upcoming blog about game mechanics analysis, reviews, and industry insights. Planning to cover topics like AI pathfinding, level design psychology, and modern game development trends.",
-    topics: [
-      "Exploring AI Pathfinding in Modern Games",
-      "The Psychology Behind Level Design", 
-      "Unity Performance Optimization Tips",
-      "Game Testing Best Practices"
-    ],
-    status: "coming_soon"
-  };
+  
 
   return (
     <div className="container mx-auto px-6 py-12 space-y-12">
@@ -192,39 +181,7 @@ const ProjectsLevel = ({ onLevelChange }: ProjectsLevelProps) => {
         ))}
       </div>
 
-      {/* Upcoming Blog Section */}
-      <Card className="level-card animate-slideInUp border-accent/20" style={{ animationDelay: '0.4s' }}>
-        <div className="text-center space-y-6">
-          <div className="space-y-2">
-            <h2 className="font-pixel text-2xl text-accent">
-              {upcomingBlog.title}
-            </h2>
-            <p className="text-sm text-accent/80 font-mono">
-              {upcomingBlog.subtitle}
-            </p>
-          </div>
-
-          <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            {upcomingBlog.description}
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-3 max-w-2xl mx-auto">
-            {upcomingBlog.topics.map((topic, index) => (
-              <div 
-                key={topic}
-                className="p-3 bg-accent/10 rounded-lg border border-accent/20 text-sm text-foreground"
-              >
-                {topic}
-              </div>
-            ))}
-          </div>
-
-          <Button variant="outline" className="pixel-button" disabled>
-            <Clock className="w-4 h-4 mr-2" />
-            COMING SOON
-          </Button>
-        </div>
-      </Card>
+      
 
       {/* Level Complete Indicator */}
       <div className="text-center animate-slideInUp" style={{ animationDelay: '0.6s' }}>

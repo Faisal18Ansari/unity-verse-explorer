@@ -1,6 +1,6 @@
 import { ReactNode, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Zap, User, Code, Briefcase, Mail, Award } from "lucide-react";
+import { ChevronLeft, ChevronRight, Zap, User, Code, Briefcase, Mail, Award, BookOpen } from "lucide-react";
 import { toast } from "sonner";
 
 interface GameLayoutProps {
@@ -26,8 +26,9 @@ const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: Game
     { id: 1, name: "About Me", icon: User, color: "text-secondary" },
     { id: 2, name: "Skills", icon: Code, color: "text-accent" },
     { id: 3, name: "Projects", icon: Zap, color: "text-electric-blue" },
-    { id: 4, name: "Experience", icon: Briefcase, color: "text-neon-pink" },
-    { id: 5, name: "Contact Me", icon: Mail, color: "text-cyan-400" }
+    { id: 4, name: "Developer's Codex", icon: BookOpen, color: "text-green-400" },
+    { id: 5, name: "Experience", icon: Briefcase, color: "text-neon-pink" },
+    { id: 6, name: "Contact Me", icon: Mail, color: "text-cyan-400" }
   ];
 
   const currentLevelData = levels[currentLevel - 1];
@@ -47,7 +48,7 @@ const GameLayout = ({ children, currentLevel, onLevelChange, totalLevels }: Game
               onClick={() => onLevelChange(level.id)}
               className={`w-3 h-3 rounded-full border-2 transition-all duration-300 hover:scale-110 group relative ${
                 level.id <= currentLevel 
-                  ? `${level.color} border-current animate-pulse` 
+                  ? `${currentLevelData?.color} border-current animate-pulse` 
                   : 'bg-transparent border-gray-500/50 hover:border-gray-300'
               }`}
               title={level.name}

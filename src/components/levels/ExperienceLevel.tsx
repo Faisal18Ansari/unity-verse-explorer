@@ -205,7 +205,7 @@ const ExperienceLevel = ({ onLevelChange }: ExperienceLevelProps) => {
       {/* Level Complete Indicator */}
       <div className="text-center animate-slideInUp" style={{ animationDelay: '0.5s' }}>
         <div className="inline-block px-8 py-3 bg-electric-blue/20 border-2 border-electric-blue rounded-lg">
-          <p className="font-pixel text-sm md:text-base text-electric-blue">LEVEL 4 CLEARED</p>
+          <p className="font-pixel text-sm md:text-base text-electric-blue">LEVEL 5 CLEARED</p>
         </div>
       </div>
     </div>

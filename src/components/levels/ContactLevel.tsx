@@ -304,7 +304,7 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <div className="font-pixel text-2xl text-secondary">5</div>
+                  <div className="font-pixel text-2xl text-secondary">6</div>
                   <div className="text-xs text-muted-foreground">LEVELS CLEARED</div>
                 </div>
                 <div className="space-y-2">
@@ -361,7 +361,7 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
               <Button 
                 variant="outline" 
                 size="sm"
-                className="pixel-button border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-neon-pink-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
+                className="pixel-button border-green-400 text-green-400 hover:bg-green-400 hover:text-green-400-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
                 onClick={() => onLevelChange?.(4)}
               >
                 LEVEL 4
@@ -369,10 +369,18 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
               <Button 
                 variant="outline" 
                 size="sm"
-                className="pixel-button border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
+                className="pixel-button border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-neon-pink-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
                 onClick={() => onLevelChange?.(5)}
               >
                 LEVEL 5
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="pixel-button border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-cyan-400-foreground text-xs md:text-sm px-2 md:px-3 py-1 md:py-2"
+                onClick={() => onLevelChange?.(6)}
+              >
+                LEVEL 6
               </Button>
             </div>
           </div>
