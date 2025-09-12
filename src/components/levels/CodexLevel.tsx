@@ -17,7 +17,7 @@ const CodexLevel = () => {
       link: "https://developers-codex.hashnode.dev/hey-there-im-faisal",
       linkText: "Check it out",
       icon: <BookOpen className="w-4 h-4 mr-2" />,
-      image: "/personal_blog.png" // Placeholder, will ask user for correct image
+      image: "/personal_blog.png"
     },
     {
       title: "The Developers Who Almost Killed Need for Speed",
@@ -43,7 +43,7 @@ const CodexLevel = () => {
       link: "https://developers-codex.hashnode.dev/cry-of-fear-what-real-depression-looks-like",
       linkText: "Read the full blog",
       icon: <Bot className="w-4 h-4 mr-2" />,
-      image: "/cryoffear.png" // Placeholder, will ask user for correct image
+      image: "/cryoffear.png"
     }
   ];
 
