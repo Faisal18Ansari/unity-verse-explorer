@@ -43,7 +43,7 @@ const AboutLevel = ({ onLevelChange }: AboutLevelProps) => {
             </div>
             <div className="flex items-center space-x-3">
               <Calendar className="w-5 h-5 text-accent" />
-              <span className="text-sm">BCA Graduate</span>
+              <span className="text-sm">Pursuing MCA</span>
             </div>
             <div className="flex items-center space-x-3">
               <GraduationCap className="w-5 h-5 text-electric-blue" />

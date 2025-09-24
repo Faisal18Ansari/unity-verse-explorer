@@ -15,7 +15,8 @@ import {
   User, 
   MessageSquare,
   Briefcase,
-  Trophy
+  Trophy,
+  Gamepad2
 } from "lucide-react";
 
 // EmailJS service
@@ -109,6 +110,13 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
       url: "https://www.instagram.com/faisa1.exe/",
       color: "text-foreground hover:text-neon-pink",
       description: "Follow my journey"
+    },
+    {
+      name: "Developer's Codex",
+      icon: Gamepad2,
+      url: "https://developers-codex.hashnode.dev/",
+      color: "text-foreground hover:text-cyan-400",
+      description: "Read my blog posts"
     },
     {
       name: "Itch.io",

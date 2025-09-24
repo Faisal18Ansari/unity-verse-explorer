@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram, Gamepad2 } from "lucide-react";
 
 interface StartScreenProps {
   onStart: () => void;
@@ -84,6 +84,26 @@ const StartScreen = ({ onStart }: StartScreenProps) => {
               style={{ animationDelay: '1s' }}
             >
               <Instagram className="w-6 h-6" />
+            </a>
+          </div>
+          
+          {/* Blog Button */}
+          <div className="pt-6">
+            <p className="font-pixel text-sm text-muted-foreground mb-3">
+              CHECKOUT MY BLOG PAGE:
+            </p>
+            <a 
+              href="https://developers-codex.hashnode.dev/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button 
+                variant="outline"
+                className="pixel-button text-sm px-6 py-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+              >
+                <Gamepad2 className="w-4 h-4 mr-2" />
+                DEVELOPER'S CODEX
+              </Button>
             </a>
           </div>
         </div>
