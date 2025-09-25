@@ -297,7 +297,7 @@ const ContactLevel = ({ onLevelChange }: ContactLevelProps) => {
                 className="pixel-button w-full"
                 asChild
               >
-                <a href="https://drive.google.com/file/d/1MbngkugYjptsddTbazqBF5w7R6njSN6M/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1bHovgZIHb9FVuEmTPn5QGwiFJG2AvnOb/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4 mr-2" />
                   DOWNLOAD PDF
                 </a>
